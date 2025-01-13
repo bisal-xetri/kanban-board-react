@@ -1,0 +1,14 @@
+.board-container {
+    margin: 20px;
+  }
+  
+  .board-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .board {
+    display: flex;
+    gap: 20px;
+  }
+  

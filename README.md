@@ -4,7 +4,7 @@ A Kanban board application with drag-and-drop functionality, built using React, 
 
 ## Live Demo
 
-[View Demo](https://your-demo-link.netlify.app)
+[View Demo](https://kanbanboard-bishal.netlify.app/)
 
 ---
 

@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# Kanban Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Kanban board application with drag-and-drop functionality, built using React, TypeScript, and react-beautiful-dnd. The app allows users to manage tasks across customizable columns.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Demo](https://your-demo-link.netlify.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Drag-and-drop functionality for tasks
+- Customizable columns (add/delete)
+- Task filtering and search
+- Undo/redo functionality
+- Local storage persistence
+- Responsive design with smooth animations
+- Keyboard accessibility
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies Used
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **React**: Component-based architecture for UI development.
+- **TypeScript**: Strong typing for better code quality and maintainability.
+- **react-beautiful-dnd**: Provides a powerful API for drag-and-drop functionality.
+- **CSS (or Tailwind CSS)**: Styling and layout.
+- **Jest**: Unit and integration tests for core components.
+- **LocalStorage API**: Data persistence for tasks and columns.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## Rationale for Technology Choices
+
+- **React**: Enables fast development and reusability of components.
+- **TypeScript**: Helps avoid runtime errors and enforces type safety.
+- **react-beautiful-dnd**: Best-in-class library for drag-and-drop features with keyboard accessibility.
+- **Jest**: Ensures robust and bug-free functionality with thorough testing.
+
+---
+## Known Limitations / Trade-offs
+
+- **Scaling issues**: The app uses local storage for persistence, which may not handle large datasets well.
+- **Undo/redo limitations**: Undo/redo operations are limited to the current session as they're not persisted in local storage.
+- **Testing gaps**: Some edge cases may not yet be covered by tests.
+
+---
+
+## Future Improvements
+
+1. **Backend integration**:
+   - Replace local storage with a backend database for scalability.
+2. **Authentication**:
+   - Add user authentication for personal Kanban boards.
+3. **Mobile UX enhancements**:
+   - Optimize drag-and-drop for touch screens.
+4. **Collaboration features**:
+   - Allow multiple users to interact with the board in real-time.
+
+---
+
+## Time Spent
+
+| **Task**                      | **Time Spent** |
+|-------------------------------|----------------|
+| Initial Setup                 | 1 hour         |
+| Drag-and-Drop Implementation  | 2 hours        |
+| Column Customization          | 1.5 hours      |
+| Local Storage Persistence     | 1 hour         |
+| Testing                       | 2 hours        |
+| Styling and UI Enhancements   | 2 hours        |
+| Documentation (README)        | 1 hour         |
+
